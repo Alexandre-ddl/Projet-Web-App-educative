@@ -1,0 +1,120 @@
+// Variables pour les couleurs et les espacements
+$color-text: #333;
+$color-button-hover: #45a049;
+$color-button-bg: #4CAF50;
+$padding-standard: 10px;
+$margin-standard: 10px;
+$border-color: #ddd;
+$border-radius: 4px;
+
+.titre-selection,
+.titre-creation {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: $color-text;
+  text-align: left;
+}
+
+.admin-page-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: calc(100vh - 20px);
+  padding: 50px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .selection-partie,
+  .creation-partie {
+    width: 48%;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .menu-deroulant,
+  .demandes-jour-menu-deroulant {
+    max-height: 40%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: $padding-standard;
+    margin-top: $margin-standard;
+    box-sizing: border-box;
+  }
+
+  .menu-item {
+    display: block;
+    width: calc(100% - 10px);
+    padding: $padding-standard;
+    margin: 5px 0;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    color: $color-text;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e8e8e8;
+    }
+  }
+
+  .filtres,
+  .input-stylise {
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      padding: $padding-standard;
+      margin: $margin-standard 0;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: $color-text;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    background-color: $color-button-bg;
+    color: white;
+    padding: $padding-standard 15px;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+
+    &:hover {
+      background-color: $color-button-hover;
+    }
+  }
+}
+
+.adminButtoneee {
+  position: fixed;
+  width: 10px;
+  top: 10px;
+  right: 10px; 
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}

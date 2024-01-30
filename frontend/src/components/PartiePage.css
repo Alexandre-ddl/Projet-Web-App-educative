@@ -1,0 +1,117 @@
+/* Reset some default browser styles */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif; /* Use a common sans-serif font */
+    background-color: #f8f8f8; /* Set a light background color */
+  }
+  
+  /* Style for the main header */
+  .bandeau {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .nomp, .idp {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  /* Center the content */
+  .Centrer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style for the main container */
+  .fullbox {
+    width:80%;
+    max-width: 1200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display:flex;
+  }
+  
+  /* Style for the first container */
+  .container1 {
+    width: 60%;
+    flex-direction:column;
+    margin-right: 20px;
+  }
+  
+  .banner {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .scrollable-section {
+    max-height: 40%;
+    overflow-y: auto;
+    flex-direction:column ;
+  }
+  /* Adjust the style for the buttons in the scrollable section */
+.scrollable-section button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style for the buttons in the scrollable section */
+  button {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  /* Style for the second container */
+  .container2 {
+    flex: 1;
+  }
+  
+  .boutons {
+    text-align: center;
+  }
+  
+  /* Style for the action buttons */
+  .kpi, .supp, .retour {
+    margin: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style for the modal */
+  .ReactModal__Overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ReactModal__Content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  

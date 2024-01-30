@@ -1,0 +1,507 @@
+.SuperPage .middle-right .button, .SuperPage .right .button {
+  color: #000; // Changez la couleur de texte en noir
+}
+
+.Scroll_admin .scrollable-button, .Scroll_Parties .scrollable-button {
+  color: #000; // Pour les boutons dans ces sections, mettez également la couleur de texte en noir
+}
+
+
+.Centrer{
+  background-color: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  width: 100%;
+
+}
+
+
+
+.SuperPage {
+  &.container {
+    display: flex; // Active Flexbox
+    justify-content: space-between; // Répartit uniformément les colonnes
+    border-radius: 8px;
+    background-color: #fff; // Couleur de fond plus douce
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); // Ombre plus subtile
+    padding: 20px;
+    height: 60%;
+    width: 60%;
+    min-width: 850px;
+    min-height: 650px;
+    overflow-x: auto; 
+    .modal {
+     
+      overflow: hidden;
+      background-color: #f5f7fa;
+      
+      
+      &.left {
+        width: 30%; 
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        min-width: 270px;
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+
+      &.middle {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        width: 50%; // Largeur de la colonne du milieu
+        display: flex;
+        //min-height: 500px; /* Hauteur minimale - ajustez selon vos besoins */
+        min-width: 400px;
+        border-radius: 8px;
+        //border: 10px solid #f5f7fa;
+        margin: 0 10px;
+        overflow: hidden;
+        &:hover {
+          transform: translateY(-2px);
+        }
+        .middle-left {
+          //border: 10px solid #f5f7fa;
+          flex: 0 0 50%;
+          margin: 10px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+          // Ajoutez des styles supplémentaires ici si nécessaire
+        }
+
+        .middle-right {
+          flex: 1 1 auto; /* Permet au conteneur de grandir et de rétrécir */
+          overflow-y: auto;
+          flex: 0 0 50%;
+          margin: 10px;
+          //display: flex;
+          flex-direction: column;
+          justify-content: flex-end; // Alignement des éléments enfant vers le bas
+          align-items: center; // Centre les éléments enfant horizontalement
+
+          .button {
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+          
+            &.type-1 {
+              background-color: rgba(255, 0, 0, 0.714);
+          
+              &:hover {
+                background-color: darkred;
+                transform: translateY(-2px); // Légère élévation au survol
+              }
+          
+              &:active {
+                transform: translateY(1px); // Simule un effet de pression
+              }
+            }
+          
+            &.type-2 {
+              background-color: rgba(0, 128, 0, 0.684);
+          
+              &:hover {
+                background-color: darkgreen;
+                transform: translateY(-2px); // Légère élévation au survol
+              }
+          
+              &:active {
+                transform: translateY(1px); // Simule un effet de pression
+              }
+            }
+          } 
+          }
+        
+      }
+
+      &.right {
+      display: flex;
+      background-color: #fff; 
+      flex-direction: column;
+      justify-content: flex-end; // Alignement des éléments enfant vers le bas
+      align-items: center; // Centre les éléments enfant horizontalement
+
+      .button {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+      
+        &.type-1 {
+          background-color: rgba(255, 0, 0, 0.714);
+      
+          &:hover {
+            background-color: darkred;
+            transform: translateY(-2px); // Légère élévation au survol
+          }
+      
+          &:active {
+            transform: translateY(1px); // Simule un effet de pression
+          }
+        }
+      
+        &.type-2 {
+          background-color: rgba(0, 128, 0, 0.684);
+      
+          &:hover {
+            background-color: darkgreen;
+            transform: translateY(-2px); // Légère élévation au survol
+          }
+      
+          &:active {
+            transform: translateY(1px); // Simule un effet de pression
+          }
+        }
+      }      
+    }
+  }
+}
+}
+
+
+
+/* Styles pour Scroll_admin */
+.Scroll_admin {
+  .app {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .banner {
+    background-color: #4a6fa5; // Couleur plus moderne
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+
+    .search-input {
+      text-align: center;
+      //display: block;
+      margin: 10px auto;
+      padding: 8px 15px; // Augmentation de la taille du padding pour un meilleur confort
+      width: 80%; // Largeur de la zone de recherche
+      border: 2px solid #4a6fa5; // Bordure fine et colorée
+      border-radius: 8px; // Arrondissement des bords pour un look moderne
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Légère ombre pour de la profondeur
+      transition: border-color 0.3s, box-shadow 0.3s; // Transitions douces pour l'interaction
+
+      &:focus {
+        border-color: #7a6f91; // Changement de couleur à la sélection
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); // Ombre plus prononcée au focus
+        outline: none; // Supprime l'outline par défaut pour un look plus propre
+      }
+
+      &::placeholder {
+        color: #4a6fa5; // Couleur du placeholder
+      }
+    }
+    .date-input {
+      padding: 8px 15px;
+      border: 1px solid #ced4da;
+      
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: white;
+      color: #495057;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      &:hover {
+        border-color: #80bdff;
+      }
+    
+      &:focus {
+        outline: none;
+        border-color: #66afe9;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+    }
+
+    .sort-button {
+      padding: 1px 1px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      background-color: white;
+      color: #495057;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    
+      &:hover {
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+    
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+      }
+    }
+
+  }
+
+  .scrollable-section {
+    height: 400px;
+    overflow-y: auto;
+    //border: 1px solid #4a6fa5; // Bordure assortie
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .scrollable-button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 90%;
+    max-width: 300px;
+    border: 1px solid #4a6fa5;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #e1e8f0;
+      border-color: #b0c4de;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+
+
+/* Styles pour Scroll_Parties 2*/
+.Scroll_Parties2 {
+  .app {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .banner {
+    background-color: #7a6f91; // Couleur différente pour Scroll_Parties
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    .sort-button {
+      padding: 1px 1px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      background-color: white;
+      color: #495057;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    
+      &:hover {
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+    
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+      }
+    }
+
+  }
+
+  .scrollable-section {
+    height: 400px;
+    overflow-y: auto;
+    //border: 1px solid #7a6f91;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .button-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .scrollable-button {
+    padding: 10px 20px;
+    margin-right: 7px;
+    border: 1px solid #7a6f91;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #e1e8f0;
+      border-color: #b0c4de;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .button-checkbox {
+    cursor: pointer;
+    margin: 0 10px;
+    transform: scale(1.2);
+  }
+}
+
+
+
+/* Styles pour Scroll_admin */
+.Scroll_Parties {
+  .app {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .banner {
+    background-color: #7a6f91; // Même couleur que Scroll_admin
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+
+    .search-input {
+      text-align: center;
+      //display: block;
+      margin: 10px auto;
+      padding: 8px 15px; // Augmentation de la taille du padding pour un meilleur confort
+      width: 80%; // Largeur de la zone de recherche
+      border: 2px solid #4a6fa5; // Bordure fine et colorée
+      border-radius: 8px; // Arrondissement des bords pour un look moderne
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Légère ombre pour de la profondeur
+      transition: border-color 0.3s, box-shadow 0.3s; // Transitions douces pour l'interaction
+
+      &:focus {
+        border-color: #7a6f91; // Changement de couleur à la sélection
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); // Ombre plus prononcée au focus
+        outline: none; // Supprime l'outline par défaut pour un look plus propre
+      }
+
+      &::placeholder {
+        color: #4a6fa5; // Couleur du placeholder
+      }
+    }
+    .date-input {
+      padding: 8px 15px;
+      border: 1px solid #ced4da;
+      
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: white;
+      color: #495057;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      &:hover {
+        border-color: #80bdff;
+      }
+    
+      &:focus {
+        outline: none;
+        border-color: #66afe9;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+    }
+
+    .sort-button {
+      padding: 1px 1px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      background-color: white;
+      color: #495057;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    
+      &:hover {
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+    
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+      }
+    }
+
+  }
+
+  .scrollable-section {
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .button-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .scrollable-button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 90%;
+    max-width: 300px;
+    border: 1px solid #7a6f91;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #e1e8f0;
+      border-color: #b0c4de;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+  .button-checkbox {
+    cursor: pointer;
+    margin: 0 10px;
+    transform: scale(1.2);
+      .checked {
+        background-color: #4CAF50; /* Couleur de fond pour l'état actif */
+        border-color: #3e8e41; /* Couleur de bordure pour l'état actif */
+      }
+
+      .after {
+        content: '✔'; /* Symbole de vérification */
+        font-size: 16px; /* Taille du symbole */
+        color: white; /* Couleur du symbole */
+        position: absolute; /* Positionnement absolu */
+        top: 50%; /* Alignement vertical */
+        left: 50%; /* Alignement horizontal */
+        transform: translate(-50%, -50%); /* Centrage du symbole */
+      }
+
+      .hover {
+        background-color: #e9e9e9; /* Couleur de fond au survol */
+        border-color: #ccc; /* Couleur de bordure au survol */
+      }
+      
+
+
+  }
+
+
+}

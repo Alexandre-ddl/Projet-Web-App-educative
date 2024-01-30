@@ -1,0 +1,118 @@
+.team-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+h1 {
+  margin-top: 130px;
+  margin-bottom: 50px;
+}
+.roles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); 
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.role-item {
+  background-color: #778899;
+  color: white;
+  padding: 60px 100px;
+  border-radius: 10px;
+  cursor: default;
+  font-size: 18px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  justify-self: center;
+  align-items: center;
+  position: relative;
+}
+
+.role-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.role-info {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  color: white;
+  padding: 5px;
+  border-radius: 0 0 8px 8px; /* Arrondir seulement les coins inférieurs */
+  text-align: center;
+  visibility: hidden; /* Caché par défaut */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.role-item:hover .role-info {
+  visibility: visible; /* Montrer au survol */
+  opacity: 1;
+}
+
+
+.kpi-button {
+  position: absolute;
+    top: 20px;
+    right: 10px; 
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120px/2) to center the tooltip */
+}
+
+.description-button:hover .tooltip-text {
+  visibility: visible;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin: 10px; /* Ajoutez une marge autour des boutons pour éviter qu'ils ne se touchent */
+}
+.confirm-assign, .confirm-unassign {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: rgba(192, 192, 192, 0.9);
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  z-index: 1000;
+ }
+ 
