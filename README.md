@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 ## Démarrer le front
-### installer les dépendances :
+### installer les dépendances cd frontend :
 ```
 yarn install
 ```
@@ -44,7 +44,7 @@ Lister les utilsateurs et leurs rôles et vérifiez les changements
 ``` 
 \du
 ```
-## Lancer le back avec poetry
+## Lancer le back avec poetry cd backend
 
 ### télécharger les dépendances
 ```
