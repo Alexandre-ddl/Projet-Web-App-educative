@@ -9,12 +9,12 @@ from sqlalchemy_utils import create_database, database_exists, drop_database
 from sqlalchemy.orm import sessionmaker
 
 #import bcrypt
-
-USER = "sacha"
-PASSWORD = ""
-HOST = "localhost"
+# TODO #
+USER = 
+PASSWORD = 
+HOST = 
 PORT = "5432"
-
+#####
 Base = declarative_base()
 
 
